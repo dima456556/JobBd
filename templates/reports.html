@@ -1,0 +1,20 @@
+{% extends 'template.html' %}
+
+{% block title %}
+Отчеты
+{% endblock %}
+
+
+{% block head %}
+<div class="container mt-5">
+    <h1>Все отчеты</h1>
+    {% for i in articles %}
+    <div class="alert alert-info">
+        <h1>{{i.title}}</h1>
+        <p><h5>{{i.text}}</h5></p>
+        <p><b><h6>Дата отправления: {{i.date.date()}}</h6></b></p>
+        <a href="/reports/{{ i.id }}" class="btn btn-warning">Детальнее</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'template.html' %}
+
+{% block title %}
+Создать отчет
+{% endblock %}
+
+
+{% block head %}
+<div class="container mt-5">
+    <h1>Добавление Отчета</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Введите тему отчета"><br>
+        <textarea type="text" name="text" id="text" class="form-control" placeholder="Введите отчет о работе"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Отправить">
+    </form>
+</div>
+
+{% endblock %}

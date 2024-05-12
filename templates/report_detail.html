@@ -1,0 +1,19 @@
+{% extends 'template.html' %}
+
+{% block title %}
+{{ article.title }}
+{% endblock %}
+
+
+{% block head %}
+<div class="container mt-5">
+    <h1>{{ article.title }}</h1>
+
+    <div class="alert alert-info">
+        <p><h5>{{article.text}}</h5></p>
+        <p><b><h6>Дата отправления: {{article.date.date()}}</h6></b></p>
+        <a href="/reports/{{ article.id }}/del" class="btn btn-danger">Удалить</a>
+    </div>
+
+</div>
+{% endblock %}
